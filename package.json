@@ -1,0 +1,26 @@
+{
+  "name": "yarn-required",
+  "version": "0.0.0-dev",
+  "description": "Generate error if not run under yarn",
+  "main": "index.js",
+  "author": "Burt Harris",
+  "license": "MIT",
+  "bin": {
+    "yarn-required": "./bin/yarn-required.js"
+  },
+  "scripts": {
+    "preparex": "node ./yarn-required"
+  },
+  "dependencies": {
+    "npmlog": "^4.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BurtHarris/yarn-required.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BurtHarris/yarn-required/issues"
+  },
+  "homepage": "https://github.com/BurtHarris/yarn-required#readme"
+}
