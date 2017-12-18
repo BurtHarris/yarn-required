@@ -7,4 +7,4 @@ if (exepath && exepath.includes('yarn')) return 0;
 
 npmlog.error("error - this script must be run from within yarn!");
 if (exepath) npmlog.info('npm_execpath: ', exepath);
-return 1;
+process.exit(1);
