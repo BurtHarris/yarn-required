@@ -1,23 +1,21 @@
 # yarn-required
 > Require a package.json script be run from [yarn](https://yarnpkg.com/)
 
-When taking advantage of advanced yarn features like workspaces, building using npm can generate hard-to-understand errors.  You can avoid this by inserting this package.json's `prepare` script, and anyone using `npm install` to build the package will get a clearer message.
+When taking advantage of advanced yarn features like workspaces, building using npm can generate hard-to-understand errors.  You can avoid this by inserting this package.json's `preinstall` script, and anyone using `npm install` to build the package will get a clearer message.
 
-Usage:
+This mainly makes sense if you are using yarn's cool [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) feature.   The example below makes that assumption...
 
-```
-yarn add -D yarn-required
-```
-or if you are using yarn workspaces
+Installation :
+
 ```
 yarn add -W yarn-required
 ```
 
-Add yarn-required to your prepare script in package.json like this...
+Then edit your workspace-level *package.json* to use this command before any installation steps are run...
 
 ```
 ...
 "scripts": {
-    "prepare": "yarn-required && <other commands as needed>"
+    "preinstall": "yarn-required"
 ...
 ```
