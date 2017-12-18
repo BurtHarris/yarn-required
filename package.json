@@ -1,6 +1,6 @@
 {
   "name": "yarn-required",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate error if not run under yarn",
   "main": "index.js",
   "author": "Burt Harris",
